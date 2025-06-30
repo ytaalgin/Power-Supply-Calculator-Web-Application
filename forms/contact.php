@@ -32,16 +32,16 @@ if ($_POST) {
         $mail->isSMTP();
         $mail->Host = "smtp.yandex.com";
         $mail->SMTPAuth = true;
-        $mail->Username = "ataqileriteknoloji@yandex.com";
-        $mail->Password = "ovmcmpyfqrenpast";
+        $mail->Username = "";
+        $mail->Password = "";
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 
         // Gönderen bilgi
-        $mail->setFrom('ataqileriteknoloji@yandex.com', 'ADMIN');
+        $mail->setFrom('', 'ADMIN');
 
         // Alıcı
-        $mail->addAddress("ytaalgin@gmail.com");
+        $mail->addAddress("");
 
         // Mail içeriği
         $mail->isHTML(true);
