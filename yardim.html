@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Güç Kaynağı Hesapla - Yardım Sekmesi</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CRaleway:300,400,500,700,800"
+
+      rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- =======================================================
+  ======================================================== -->
+  </head>
+  <body> <!-- ======= Hero Section ======= -->
+    <!-- End Hero -->
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png"
+
+            alt=""></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto " href="index.html">Anasayfa</a></li>
+			<li><a class="nav-link scrollto active" href="yardim.html">Yardım</a></li>
+			<li><a class="nav-link scrollto active" href="index.html#contact">Feedback Formu</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i> </nav>
+        <!-- .navbar --> </div>
+    </header>
+    <!-- End Header -->
+    <main id="main">
+      <!-- ======= About Section ======= -->
+      <section id="about">
+                <div class="container" data-aos="fade-up">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="section-title">Anahtarlamalı Güç Kaynakları Yardım Sayfası</h3>
+              <div class="section-title-divider"></div>
+              <p>
+        Anahtarlamalı güç kaynakları, enerji dönüşümünde yaygın olarak kullanılan ve 
+		verimli bir şekilde elektrik enerjisini bir formdan diğerine çeviren sistemlerdir. 
+		Bu tür güç kaynakları, giriş voltajını çeşitli yöntemlerle istenilen çıkış voltajına 
+		veya akıma dönüştürebilir. Hesaplama programlarımız, farklı topolojiler için ilgili
+		hesaplamaları gerçekleştirmek ve güç elektroniği üzerinde çalışan ya da bu alana
+		ilgisi olan kişilere yardımcı olmak amacıyla hazırlanmıştır. Bu versiyon, aracın yeni
+		sürümü olarak yayınlanmış ve bazı hatalar düzeltilmiştir. Gelen feedback'lerle başka hataların da düzeltilmesi amaçlanmaktadır. Grafikler 
+		Spice programlarında yapılan simülasyonlar gibi tamamen doğru çıktı vermemekle birlikte, en azından
+		zaman değişimleri, dalga çıktıları vb. konularda fikir sahibi olunması hedeflenerek modifiye edilmiştir.
+		Programdan kaynaklanabilecek hatalı seçimlerin sonuçlarından ATAQ İleri Teknoloji A. Ş. firması, "www.ahmetturanalgin.com", Yasemin Tuğba Algın, Zehra Betül Kasap
+		ve Ahmet Turan Algın sorumlu değildir. Lütfen sorularınız, bildirimleriniz ve destek için <a href="mailto:ytaalgin@gmail.com">ytaalgin@gmail.com</a>'a ulaşınız.
+		Farklı topolojilerin eklenmesi noktasında önerilerde bulunabilir ve tavsiyelerinizi geliştiricilere sunabilirsiniz. 
+		<br><br>
+		Bu programın, elektrik ve elektronik mühendisliği alanında çalışan veya bu konularla ilgilenen kişiler için faydalı bir kaynak olması hedeflenmiştir. Kullanıcılara özellikle, 
+		SMPS ve güç dönüşümüyle ilgili temel kavramları anlamak, tasarım ve uygulama konularında yardımcı olmasını umuyoruz. Aşağıda ilk versiyonda hesaplamalarını sağladığımız
+		topolojiler ve işlevleri açıklanmıştır. Eğer konu hakkında yeterli düzeyde bilginiz yoksa lütfen okuyunuz:
+		</p>
+		<p>
+		- Buck converter, giriş voltajını daha düşük bir çıkış voltajına dönüştüren bir güç dönüştürücüdür. 
+		Program, giriş ve çıkış voltajlarına göre akım ve gerilim değerlerini hesaplar ve grafiksel olarak gösterir.
+		<br>
+		- Boost converter, giriş voltajını daha yüksek bir çıkış voltajına dönüştüren bir güç dönüştürücüdür. 
+		Program, giriş ve çıkış voltajlarına göre akım ve gerilim değerlerini hesaplar ve grafiksel olarak gösterir.
+		<br>
+		- Buck-boost converter, birkaç izole çıkış voltajı sağlayabilir. Program, giriş ve çıkış voltajlarına 
+		göre akım ve gerilim değerlerini hesaplar ve grafiksel olarak gösterir.
+		<br>
+		- Flyback converter, giriş voltajını negatif bir voltaja dönüştüren bir güç dönüştürücüdür. Program, giriş 
+		ve çıkış voltajlarına göre akım ve gerilim değerlerini hesaplar ve grafiksel olarak gösterir.
+		<br>
+		- Single transistor forward converter, elektriksel olarak izole edilmiş bir voltaj sağlayabilir. Program, 
+		güç değerleri ve voltaj akım karakteristikleri üzerinden hesaplamalar yapar.
+		<br>
+		- Two-transistor forward converter, daha yüksek güçlerde elektriksel olarak izole edilmiş bir voltaj sağlar. 
+		Program, güç değerleri ve voltaj akım karakteristikleri üzerinden hesaplamalar yapar.
+		<br>
+		- Half-bridge push-pull converter, birkaç KW'a kadar elektriksel olarak izole edilmiş bir voltaj sağlar. 
+		Program, güç değerleri ve voltaj akım karakteristikleri üzerinden hesaplamalar yapar.
+		<br>
+		- Full-bridge push-pull converter, yüksek KW değerlerine kadar elektriksel olarak izole edilmiş bir voltaj 
+		sağlar. Program, güç değerleri ve voltaj akım karakteristikleri üzerinden hesaplamalar yapar.
+		<br>
+		- Power factor pre-regulator, sinüzoidal şebeke akımı için anahtarlamalı güç kaynağıdır. Program, güç 
+		faktörü düzeltilmesi ve akım gerilim dengesi için hesaplamalar yapar.
+		<br>
+		- Indüktör hesaplama bölümü, maksimum akım I için indüktör L'nin hesaplanmasıyla ilgili bilgiler sunar. 
+		Program, belirli parametrelerle indüktans değerini hesaplar.
+		<br>
+		- LLC full-bridge resonant converter, belirli bir frekansta rezonans yapacak şekilde ayarlanmış güç 
+		çeviricisidir. Program, rezonans frekansı ve dönüşüm verimliliği gibi değerleri hesaplar.
+		<br><br>
+		***Not: "Transformer data" ve "Coil data" butonlarına bilgileri girip "hesapla" butonuna bastıktan sonra tıklayınız.
+		Aksi takdirde doğru bobin ve transformatör önerilerini alamayabilirsiniz. "Bu topolojiye uygun" diye düşündüğünüz
+		transformatör ve bobinler varsa, ilgili bilgileri girerek onları tablolara ekleyebilirsiniz. Bu sayede kendi veri tabanımızı
+		oluşturmayı amaçlıyoruz.
+		<br><br>
+		Tekrar belirtmek gerekirse; bu programlar öncelikle anahtarlamalı güç kaynaklarının temellerini bilen kişiler için yazılmıştır. Ancak 
+		unutulmamalıdır ki, programlar tarafından verilen değerler genel kabullere dayanmakta ve gerçek uygulamalarda 
+		farklı sonuçlar alınabilmektedir. Doğru ve güvenilir sonuçlar için ölçümler ve testler yapılmalıdır! Lütfen konu hakkında yeterli 
+		bilgi düzeyine eriştikten sonra programları kullanınız. Ek olarak, elde ettiğiniz sonuçlar üzerinde gerekli teknik doğrulamaları yapınız. 
+		Programları yazarken transistörlerin kontrolü ve bazı önleyici tedbirler (deşarj setleri, akım sınırlamaları) dikkate alınmamıştır.
+		Ferrit çekirdeklere yönelik öneriler, üretici tablolarının yanı sıra Keith Billings: Switch Mode Power Supply 
+		Handbook kitabına dayanan yaklaşık değerlerdir. Her durumda tarafımızca verilen spesifikasyonları uygun veri sayfaları ile kontrol ediniz.
+		Sonuçlar excel formatında indirilebilmektedir. Grafikleri de görsel veya pdf olarak kaydedebilirsiniz. Bu sayfa, güncellemelerle birlikte sürekli
+		yeniden düzenlenecektir. Sonraki sürümler için resimli açıklamalar da hazırlanması planlanmaktadır. Takipte kalınız.
+		<br><br>
+		Bu sayfalar telif hakları kapsamında korunmaktadır. Sayfaların veya bölümlerin çevirisi veya çoğaltılması da dahil olmak üzere 
+		tüm hakları saklıdır. Bu sayfaların hiçbir kısmı Yasemin Tuğba Algın, Zehra Betül Kasap ve Ahmet Turan Algın'ın yazılı izni olmadan çoğaltılamaz. Aksi bir durum
+		tespit edildiğinde, hukuki süreç başlatılacaktır.
+		<br><br>
+		Bu yazıda, programlarda ve "www.ahmetturanalgin.com" web sitesi üzerinde verilen tüm bilgiler, Firmalar' a "Eğitim" ve "Danışmanlık" hizmetleri 
+		içeriğiyle aktarılan tüm bilgiler, 27 yıllık mühendislik tecrübeleriyle verilen bilgilerdir. Verilen tüm bilgilerin doğru ve güvenilir olduğuna 
+		inanılmaktadır. Ancak; "Ahmet Turan Algın", "Yasemin Tuğba Algın", "Zehra Betül Kasap" veya "www.ahmetturanalgin.com" bu tür bilgilerin kullanımından doğabilecek herhangi 
+		bir patent veya üçüncü şahısların haklarının ihlalinden sorumlu değildir. "Ahmet Turan Algın", "Yasemin Tuğba Algın" veya "www.ahmetturanalgin.com"dan 
+		herhangi bir patent veya patent hakkı kapsamında dolaylı veya başka bir şekilde lisans verilmez.
+<br><br>
+		 Firmalar' a "Eğitim" ve "Danışmanlık" hizmetleri içeriğiyle aktarılan tüm bilgiler ve bu web sitesinde belirtilen özellikler, önceden haber verilmeksizin 
+		 değiştirilebilir. Bu özellikler, daha önce sağlanan tüm bilgilerin yerine geçer ve onların yerini alır.
+<br><br>
+		Firmalar' a "Eğitim" ve "Danışmanlık" hizmetleri içeriğiyle aktarılan tüm bilgiler ve "Ahmet Turan Algın", bahsi geçen hesaplama toolları veya 
+		"www.ahmetturanalgin.com" da yayınlanan makalelerin içeriğinde yer alan teknik bilgilerin, "Ahmet Turan Algın" veya "www.ahmetturanalgin.com" un açık 
+		yazılı onayı olmadan, insan hayatını etkileyen projelerde, yaşam destek cihazlarında veya sistemlerinde, kritik bileşenler olarak kullanılmasına izin verilmez. 
+		Kullanılması durumunda; "Ahmet Turan Algın", "Yasemin Tuğba Algın", "Zehra Betül Kasap" veya "www.ahmetturanalgin.com" hiçbir şekilde sorumlu tutulamaz.
+		<br><br>
+		BU WEB SİTESİ ÜZERİNDEN SAĞLANAN TÜM BİLGİLER, FİRMALAR' A "EĞİTİM" VE "DANIŞMANLIK" HİZMETLERİ İÇERİĞİYLE AKTARILAN TÜM BİLGİLER, YALNIZCA BİLGİLENDİRME 
+		AMACI İÇİNDİR.
+<br><br>
+		"AHMET TURAN ALGIN", "YASEMİN TUĞBA ALGIN", "ZEHRA BETÜL KASAP" VEYA "www.ahmetturanalgin.com"; FİRMALAR' A "EĞİTİM" VE "DANIŞMANLIK" HİZMETLERİ İÇERİĞİYLE AKTARILAN TÜM BİLGİLER 
+		VE BU SİTEDE YER ALAN BİLGİLERİN HERHANGİ BİR AMACA UYGUNLUĞU İLE İLGİLİ OLARAK,  HİÇBİR BEYANDA (TAAHHÜTTE) BULUNMAMAKTADIR. BURADA BİLGİ, HERHANGİ BİR GARANTİ 
+		OLMAKSIZIN "OLDUĞU GİBİ" SAĞLANIR. BU WEB SİTESİ ÜZERİNDEN SAĞLANAN TÜM BİLGİLERDE, FİRMALAR' A "EĞİTİM" VE "DANIŞMANLIK" HİZMETLERİ İÇERİĞİYLE AKTARILAN TÜM 
+		BİLGİLERDE, KULLANILAN ÇİZİM VE/VEYA RESİMLER TEMSİLİ OLARAK VERİLMİŞTİR.
+		<br><br>
+		<a href="https://github.com/ytaalgin">Geliştiricilerden Yasemin Tuğba ALGIN'ın Github hesabına ulaşmak için tıklayınız!</a>
+		</p><br>
+		<h3>Kaynakça</h3>
+		<p>Billings, K., & Morey, T. (2010). Switchmode power supply handbook (3rd ed.). McGraw-Hill Education.</p>
+		<p>Maniktala, S. (2012). Switching power supplies A - Z. McGraw-Hill Education.</p>
+		<p>Rashid, M. H. (Ed.). (2023). Power electronics handbook (5th ed.). Academic Press.</p>
+		<p>Mappus, S. (2014, Ekim 2). Power converter topology trends.</p>
+		<p>TDK. (2019). LLC resonance power transformers: Pin terminal type SRX/SRV series. (trans_ac_dc-converter_srx_srv_en.f). Datasheet.</p>
+		<p>MLD Group, Industrial & Power Conversion Division, Off-line SMPS BU Application Lab. (2023). Simplified analysis and design of series-resonant LLC half-bridge converters.</p>
+		<p>Attanasio, R. (2012, Aralık). AN4070 application note: 250 W grid connected microinverter.</p>
+		<p>Abdel-Rahman, S. (2012, Eylül). Resonant LLC converter: Operation and design (Application Note AN 2012-09 V1.0). Infineon Technologies North America.</p>
+		<p>Ferroxcube. (2013, Temmuz 31). Soft ferrites E cores and accessories (MFP226).</p>
+		<p>Gottlieb, I. (1993). Power supplies: Switching regulators, inverters, and converters (1st ed.). McGraw-Hill/TAB Electronics.</p>
+            </div>
+          </div>
+        </div>
+		
+      </section>
+      <!-- End About Section -->
+      <!-- End #main -->
+      <!-- ======= Footer ======= -->
+      <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="copyright"> © Copyright <strong>Ahmet Turan Algın</strong>.
+                Tüm hakları saklıdır. </div>
+              <div class="credits"> Designed by <a href="https://www.linkedin.com/in/yasemin-algin/">Yasemin
+                  Tuğba Algın & Zehra Betül Kasap</a> </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer -->
+      <div id="preloader"></div>
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/vendor/typed.js/typed.min.js"></script>
+      <!-- Template Main JS File -->
+      <script src="assets/js/main.js"></script> </main>
+  </body>
+</html>

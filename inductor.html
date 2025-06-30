@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>İndüktör Hesapla</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CRaleway:300,400,500,700,800"
+
+      rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+  </head>
+  <body> <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png"
+
+            alt=""></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto " href="index.html">Anasayfa</a></li>
+			<li><a class="nav-link scrollto active" href="yardim.html">Yardım</a></li>
+			<li><a class="nav-link scrollto active" href="index.html#contact">Feedback Formu</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i> </nav>
+        <!-- .navbar --> </div>
+      <style>
+        .inner-page {
+            justify-content: center;
+            margin: 20px;
+        }
+        #inputs {
+            margin: 5px;
+            padding-bottom: 20px;
+        }
+		@media (max-width: 768px) {
+        .d-flex {
+          display: block;
+        }
+        #buttons {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        #buttons .btn {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+    </style> </header>
+    <!-- End Header -->
+    <main id="main">
+      <!-- ======= Breadcrumbs ======= -->
+      <section class="breadcrumbs">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <h2>İndüktör Hesapla</h2>
+            <ol>
+              <li><a href="index.html">Anasayfa</a></li>
+              <li>İndüktör Hesaplama</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <!-- End Breadcrumbs -->
+<section class="inner-page">
+  <div id="container" class="d-flex justify-content-between align-items-center">
+    <div id="inputs" class="me-auto">
+      <h2>Giriş Bilgileri</h2>
+      <div class="input-group mb-3">
+        <label for="vin_min" class="input-group-text">İndüktans/L [µHenry]:</label>
+        <input id="vin_min" step="0.1" placeholder="µH" type="number" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <label for="vin_max" class="input-group-text">Imax [Amper]:</label>
+        <input id="vin_max" step="0.1" placeholder="A" type="number" class="form-control">
+      </div>
+      <button id="calculateButton" onclick="hesapla()" class="btn btn-primary">Hesapla</button>
+	  <br><br>
+	  <p>L: <span id="lOutput">-</span> µH</p>
+	  <p>Wmax: <span id="wmax1">-</span> µJoule</p>
+	  <p>Imax: <span id="deltaILMax">-</span> A</p>
+    </div>
+    <div id="buttons" class="ms-auto">
+      <button id="printButton" onclick="printPage()" class="btn btn-primary">Yazdır</button>
+      <button id="openButton" onclick="openTable()" class="btn btn-primary">Uygun İndüktör Önerileri</button>
+    </div>
+  </div>
+</section>
+    </main>
+    <!-- End #main -->
+    <!-- ======= Footer ======= -->
+      <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="copyright"> © Copyright <strong>Ahmet Turan Algın</strong>.
+                Tüm hakları saklıdır. </div>
+              <div class="credits"> Designed by <a href="https://www.linkedin.com/in/yasemin-algin/">Yasemin
+                  Tuğba Algın & Zehra Betül Kasap</a> </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <!-- End Footer -->
+    <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script10.js" defer="defer"></script>
+  </body>
+</html>

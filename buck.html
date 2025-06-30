@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Buck Converter</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CRaleway:300,400,500,700,800"
+
+      rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+  </head>
+  <body> <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png"
+
+            alt=""></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto " href="index.html">Anasayfa</a></li>
+			<li><a class="nav-link scrollto active" href="yardim.html">Yardım</a></li>
+			<li><a class="nav-link scrollto active" href="index.html#contact">Feedback Formu</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i> </nav>
+        <!-- .navbar --> </div>
+      <style>
+        .inner-page {
+            justify-content: center;
+            margin: 20px;
+        }
+        #inputs {
+            margin: 5px;
+            padding-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+		@media (max-width: 768px) {
+        .col-md-3, .col-md-9, .col-md-7, .col-md-5 {
+          width: 100%;
+          flex: 100%;
+          max-width: 100%;
+        }
+        .d-flex {
+          display: block;
+        }
+        #buttons {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        #buttons .btn {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        table, th, td {
+          font-size: 12px;
+          padding: 4px;
+        }
+        table th, table td {
+          word-wrap: break-word;
+        }
+        canvas {
+          width: 100% !important;
+          height: auto !important;
+        }
+      }
+    </style> </header>
+    <!-- End Header -->
+    <main id="main">
+      <!-- ======= Breadcrumbs ======= -->
+      <section class="breadcrumbs">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <h2>Buck Converter Hesapla</h2>
+            <ol>
+              <li><a href="index.html">Anasayfa</a></li>
+              <li>Buck Converter</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <!-- End Breadcrumbs -->
+      <section class="inner-page">
+  <div id="container">
+<div class="row">
+    <div class="col-md-3 d-flex align-items-center">
+      <img src="assets/img/kaynak/abwandl_e.png" alt="Buck Converter" class="img-fluid">
+    </div>
+    <div class="col-md-9">
+      <div id="inputs">
+        <h2>Giriş Bilgileri</h2>
+        <div class="input-group mb-3">
+          <label for="vin_min" class="input-group-text">Min. Giriş Gerilimi [Volt]:</label>
+          <input id="vin_min" step="0.1" placeholder="V" type="number" class="form-control">
+          <label for="vin_max" class="input-group-text">Max. Giriş Gerilimi [Volt]:</label>
+          <input id="vin_max" step="0.1" placeholder="V" type="number" class="form-control">
+          <label for="vout" class="input-group-text">Çıkış Gerilimi [Volt]:</label>
+          <input id="vout" step="0.1" placeholder="V" type="number" class="form-control">
+        </div>
+		<div class="input-group mb-3">
+		<label for="ilout" class="input-group-text">Çıkış Akımı [Amper]:</label>
+          <input id="ilout" step="0.1" placeholder="A" type="number" class="form-control">
+          <label for="f_khz" class="input-group-text">Anahtarlama Frekansı [kHz]:</label>
+          <input id="f_khz" step="0.1" placeholder="kHz" type="number" class="form-control">
+  		<label for="mode" class="input-group-text">Çalışma Modu:</label>
+			<select id="mode" class="form-select">
+			  <option value="continuous">CCM</option>
+			  <option value="discontinuous">DCM</option>
+			  <option value="critical">CRM</option>
+			</select>
+		  </div>
+		  <div class="input-group mb-3">
+		<label for="verim" class="input-group-text">Verim [Örnek: "80%" için "80" olarak girilmeli]:</label>
+          <input id="verim" step="0.1" placeholder="%" type="number" class="form-control">
+		  <button id="calculateButton" onclick="hesapla()" class="btn btn-primary">Hesapla</button>
+		  </div>
+      </div>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-md-6">
+	  <h2>Sonuçlar</h2>
+  <table id="outputsTable" class="table">
+    <tr>
+      <th>Endüktans Değeri (L)</th>
+      <th>Çıkış Kapasitörü (C)</th>
+      <th>Eşdeğer Yük Direnci (R)</th>
+      <th>ΔIL (Max)</th>
+	  <th>Wmax (W)</th>
+    </tr>
+    <tr>
+      <td><span id="lOutput">-</span> μH</td>
+      <td><span id="cOutput">-</span> μF</td>
+      <td><span id="rOutput">-</span> Ω</td>
+      <td><span id="deltaILMax">-</span></td>
+	  <td><span id="wmax1">-</span> µWs</td>
+    </tr>
+  </table>
+</div>
+<div class="col-md-2 d-flex align-items-center justify-content-end">
+<p>Giriş Akımı: <span id="iin">-</span> A</p>
+</div>
+      <div class="col-md-4 d-flex align-items-center justify-content-end">
+        <div id="buttons" class="d-flex gap-2">
+          <button id="printButton" onclick="printPage()" class="btn btn-primary">Yazdır</button>
+          <button id="downloadButton" onclick="downloadTableAsPDF()" class="btn btn-primary">Sonuçları Kaydet</button>
+          <button id="openButton" onclick="openTable()" class="btn btn-primary">Coil Data</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div id="charts">
+    <h2>Grafikler</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <canvas id="ilChart" width="400" height="400"></canvas>
+      </div>
+      <div class="col-md-4">
+        <canvas id="vinChart" width="400" height="400"></canvas>
+      </div>
+	  <div class="col-md-4">
+        <canvas id="effChart" width="400" height="400"></canvas>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div id="table">
+    <h2>Tablo</h2>
+    <div class="table-responsive">
+      <table id="resultTable" class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Zaman</th>
+            <th>Vin</th>
+            <th>IL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Tablo içeriği buraya eklenecek -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright"> © Copyright <strong>Ahmet Turan Algın</strong>.
+              Tüm hakları saklıdır. </div>
+            <div class="credits"> Designed by <a href="https://www.linkedin.com/in/yasemin-algin/">Yasemin
+                Tuğba Algın</a> </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js" defer="defer"></script>
+  </body>
+</html>
